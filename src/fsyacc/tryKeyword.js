@@ -1,5 +1,5 @@
 ﻿import { tryToken } from '../tryToken'
 
-export const tryKeyword = tryToken(/^%(%|\w+)/, 'keyword')
+export const tryKeyword = tryToken(/^(%[a-z]+|error)/, 'keyword')
 
 

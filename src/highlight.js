@@ -1,6 +1,8 @@
-﻿import { fsharpTokenize } from './fsharp/fsharpTokenize'
-import { fslexTokenize } from './fslex/fslexTokenize'
-import { fsyaccTokenize } from './fsyacc/fsyaccTokenize'
+﻿import { fsharpTokenize } from './fsharp'
+import { fslexTokenize } from './fslex'
+import { fsyaccTokenize } from './fsyacc'
+import { yaccTokenize } from './yacc'
+
 import { render } from './render'
 
 export function highlight(pre, lang, code) {
@@ -11,7 +13,10 @@ export function highlight(pre, lang, code) {
             return fslexTokenize(code)
         } else if (lang === 'fsy') {
             return fsyaccTokenize(code)
+        } else if (lang === 'yacc') {
+            return yaccTokenize(code)
         }
+
     })()
     return render(pre, tokens)
 }

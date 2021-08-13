@@ -19,6 +19,7 @@ module.exports = function (api) {
         '@babel/plugin-proposal-export-default-from',
         '@babel/plugin-proposal-export-namespace-from',
         '@babel/plugin-proposal-class-properties',
+        ["@babel/plugin-proposal-private-property-in-object", { "loose": false }],
         ['@babel/plugin-proposal-pipeline-operator', { proposal: 'fsharp' }],
     ]
 

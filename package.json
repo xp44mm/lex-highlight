@@ -2,20 +2,21 @@
   "dependencies": {},
   "devDependencies": {
     "structural-comparison": "1.0.12",
-    "@babel/core": "7.14.8",
+    "@babel/core": "7.15.0",
     "@babel/plugin-proposal-class-properties": "7.14.5",
     "@babel/plugin-proposal-export-default-from": "7.14.5",
     "@babel/plugin-proposal-export-namespace-from": "7.14.5",
-    "@babel/plugin-proposal-pipeline-operator": "7.14.8",
+    "@babel/plugin-proposal-pipeline-operator": "7.15.0",
     "@babel/plugin-syntax-bigint": "7.8.3",
-    "@babel/preset-env": "7.14.9",
+    "@babel/preset-env": "7.15.0",
     "@webpack-cli/serve": "1.5.1",
     "babel-jest": "27.0.6",
     "babel-loader": "8.2.2",
     "clean-webpack-plugin": "3.0.0",
-    "core-js": "3.16.0",
+    "core-js": "3.16.1",
     "jest": "27.0.6",
-    "webpack": "5.48.0",
+    "jsdom": "16.7.0",
+    "webpack": "5.50.0",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2",
     "webpack-merge": "5.8.0"
@@ -25,11 +26,14 @@
     "start": "webpack serve --config webpack.dev.js",
     "test": "jest"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "name": "lex-highlight",
   "main": "dist/lex-highlight.js",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "author": "cuishengli<34696643@qq.com>",
-  "description": "`lex-highlight` is a syntax highlighter written according to the lexical analyzer. It supports advanced features such as string interpolation and language nesting.",
+  "description": "A syntax highlighter written according to the lexical analyzer. So it can correctly analyze all kinds of tokens. It supports advanced features such as string interpolation and language nesting.",
   "keywords": [],
   "repository": {
     "type": "git",

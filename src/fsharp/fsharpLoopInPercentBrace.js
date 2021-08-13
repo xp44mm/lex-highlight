@@ -17,6 +17,7 @@ import { trySingleQuoteString } from './trySingleQuoteString'
 import { tryTripleQuoteString } from './tryTripleQuoteString'
 import { tryTypeParameter } from './tryTypeParameter'
 import { tryVerbatimString } from './tryVerbatimString'
+import { tryCompilerDirective } from './tryCompilerDirective'
 
 export const fsharpTokenizeOnce = matching([
     tryWhitespace,
@@ -32,6 +33,7 @@ export const fsharpTokenizeOnce = matching([
     tryInterpolatedTripleQuoteString,
     tryInterpolatedSingleQuoteString,
     tryInterpolatedVerbatimString,
+    tryCompilerDirective,
     tryBang,
     tryIdentifier,
     tryWord,

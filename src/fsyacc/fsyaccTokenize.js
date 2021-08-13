@@ -28,11 +28,3 @@ const fsyaccIter = trampoline(fsyaccLoop)
 
 export const fsyaccTokenize = input => fsyaccIter([], input)
 
-function cc() {
-    console.log(
-        new Error().stack
-            .split('\n')[2]
-            .trim()
-            .split(' ')[1]
-    )
-}
